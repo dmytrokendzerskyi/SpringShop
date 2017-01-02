@@ -1,0 +1,42 @@
+div{
+	font-family:Palatino Linotype;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+        .initLoad {
+            opacity: 0.99;
+            position: fixed;
+            width: 100%;
+            min-height: 100%;
+            background-color: white;
+            display: block;
+            z-index: 99999 !important;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .initLoad .fetching .fetchContainer .initLoadMsg {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+        }
+
+.circleSide {
+    position: relative;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: circle infinite .75s linear;
+    -moz-animation: circle infinite .75s linear;
+    -o-animation: circle infinite .75s linear;
+    animation: circle infinite .75s linear;
+    border: 2px solid #00ff00;
+    border-top-color: rgba(255,255,255,.2);
+    border-right-color: rgba(255,255,255,.2);
+    border-bottom-color: rgba(255,255,255,.2);
+    border-radius: 100%;
+}
