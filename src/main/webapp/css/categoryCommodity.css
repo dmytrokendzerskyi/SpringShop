@@ -105,6 +105,240 @@
 
 /* Demo purposes only */
 
+
+/* filter */
+.sidebar {
+  float: left;
+  text-transform: capitalize;
+}
+.sidebar h3 {
+  margin-bottom: 0px;
+}
+.sidebar ul {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+.sidebar .sortoptions {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.product {
+  max-width: 110px;
+  height: 70px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #eee;
+}
+
+/* filter */
+
+/* this declares a better box model */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+.list-wrap label {
+  float:left;
+  color:#00BDE8;
+}
+.search-box {
+  float:left;
+  clear:left;
+  width:70%;
+  padding:0.4em;
+  font-size:1em;
+  color:#555;
+}
+
+.list-count {
+  float:left;
+  text-align:center;
+  width:30%;
+  padding:0.5em;
+  color:#ddd;
+}
+
+
+
+li {
+  transition-property: margin, background-color, border-color;
+  transition-duration: .4s, .2s, .2s;
+  transition-timing-function: ease-in-out, ease, ease;
+}
+
+.empty-item {
+  transition-property: opacity;
+  transition-duration: 0s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+}
+
+.empty .empty-item {
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-delay: .3s;
+  transition-timing-function: ease;
+}
+
+.hiding {
+  margin-left:-100%;
+  opacity:0.5;
+}
+
+.hidden {
+  display:none;
+}
+
+ul {
+  float:left;
+  width:100%;
+  margin:2em 0;
+  padding:0;
+  position:relative;
+}
+
+ul:before {
+  content:'desserts';
+  position:absolute;
+  left:-2.8em;
+  font-size:3em;
+  text-align:right;
+  top:1.5em;
+  color:#ededed;
+  font-weight:bold;
+  font-family: 'Maven Pro', sans-serif;
+  transform:rotate(-90deg);
+}
+
+
+.empty-item {
+  background:#fff;
+  color:#ddd;
+  margin:0.2em 0;
+  padding:0.5em 0.8em;
+  font-style:italic;
+  border:none;
+  text-align:center;
+  visibility:hidden;
+  opacity:0;
+  float:left;
+  clear:left;
+  width:100%;
+}
+
+.empty .empty-item {
+  opacity:1;
+  visibility:visible;
+}
+li{
+list-style: none;
+}
+
+
+/*
+The following are styles purely for the surroundings
+*/
+/*header  */
 body {
-  background-color: #212121;
+  background:#34495e;
+  font-family:'Roboto', sans-serif;
+}
+.logotipe{
+	
+	margin:0px;
+	height:40px;
+	width: 170px;
+	color:white;
+	box-shadow: 0 0 5px rgba(0,0,0,1);
+	background-color: black;
+	background: linear-gradient(45deg,#1E69FF,#B9D7FF);
+	text-align: center;
+	border-box: content-box;
+	font-size: 20px;
+	padding:5xp;
+	clear:left ;
+	float:left;
+}
+#menu-nav {
+	background:#34495e;
+  float:left;
+  width:100%; height:auto;
+  margin:0;
+  background-color:#ecf0f1;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 0 5px rgba(0,0,0,0.3);
+}
+
+/* navigation bar */
+#navigation-bar {
+  background:#34495e;
+  width:100%;
+}
+  
+#navigation-bar ul {
+    margin:0; padding:0;
+    list-style:none;
+    width:100%;
+    border-radius:4px;
+    overflow:hidden;
+}
+  
+#navigation-bar li {
+    float:left;
+    padding:0; margin:0;
+    width:20%;
+}
+  
+#navigation-bar a {
+    color:#848484;
+    font-size:20px; 
+    text-decoration:none; text-align:center;
+    width:100%;
+    padding:20px 0;
+    display:block; position:relative;
+    transition: all 0.3s ease;
+}
+
+#navigation-bar a:hover {color:#e74c3c;}
+/*  #navigation-bar li:first-child a {border-radius:4px 0 0 4px;}
+#navigation-bar li:last-child a {border-radius:0 4px 4px 0;}  */
+#navigation-bar a:before {
+  content:'';
+  transition:all .4s ease-in-out;
+  position:absolute; right:50%; left:50%; bottom:0;
+  display:block;
+  height:2px;
+  background-color:#e74c3c;
+} 
+#navigation-bar li:hover a:before, #navigation-bar a:hover:before {right:0; left:0;}
+#navigation-bar span {display:block;}
+
+/* search bar */
+#search-bar {display:none; width:100%; border-bottom:3px solid #e74c3c; border-radius:4px;}
+form {width:90%; margin:10px auto;}
+input#search-text {
+  width:90%; padding:10px 5%; margin:0;
+  text-align:center; outline:none;
+  border-radius:4px; border:1px solid #e74c3c;
+  font:normal 300 18px 'Roboto',sans-serif; color:#888;
+  transition:box-shadow 0.5s ease;
+}
+input#search-text:focus, input#searchfld:active {
+  box-shadow:0 0 10px #e74c3c;
+}
+
+/* header */
+a { 
+    text-decoration: none; 
+   }
+   body {
+  background:
+    linear-gradient(
+    rgba(246,247,249,0.8),
+    rgba(246,247,249,0.8)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
+  background-size: cover;
 }

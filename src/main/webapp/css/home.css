@@ -1,8 +1,4 @@
 @CHARSET "UTF-8";
-body{
-	background-color:#34495e;
-  font-family:'Roboto', sans-serif;
-}
 a{
 	text-decoration: none;
 }
@@ -23370,7 +23366,11 @@ code {
 
 
 /* Demo purposes only */
-
 body {
-  background-color: #212121;
+  background:
+    linear-gradient(
+    rgba(246,247,249,0.8),
+    rgba(246,247,249,0.8)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
+  background-size: cover;
 }

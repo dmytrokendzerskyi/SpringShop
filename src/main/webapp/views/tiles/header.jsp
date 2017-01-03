@@ -29,7 +29,7 @@
       <li class='menu-sub-nav current-item'><a href='home'><i class='fa fa-home'></i><span>Home</span></a></li>
       <li class='menu-sub-nav'><a href='#'><i class='fa fa-cogs'></i><span>About</span></a></li>
       <sec:authorize access="hasRole('ROLE_USER')"><li class='menu-sub-nav'><a href='myProfile'><i class='fa fa-user'></i><span>Profile</span></a></li></sec:authorize>
-      <li class='menu-sub-nav'><a href='userSign'><i class='fa fa-book'></i><span>Contact</span></a></li>
+      <li class='menu-sub-nav'><a href='userSign'><i class='fa fa-book'></i><span>Sign In | Sign Up</span></a></li>
       <li class='menu-sub-nav' id='searchbox'><a href='#'><i class='fa fa-search'></i><span>Search</span></a></li>
     </ul>
   </div>
