@@ -89,7 +89,7 @@ public class UserController {
 	
 	@RequestMapping("/loginError")
 	public String loginError(Model model){
-		model.addAttribute("error", "Your password is not true");
+		model.addAttribute("error", "Your password is not correct");
 		return "userSignIn";
 	}
 	

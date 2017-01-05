@@ -35,11 +35,11 @@ public class CategoryController {
 	}
 	
 	@RequestMapping(value ="/saveCategory" , method = RequestMethod.POST)
-	public @ResponseBody boolean click(@RequestBody Category category){
+	public @ResponseBody List<CategoryDTO> click(@RequestBody Category category){
 						
 		categoryService.save(category);		
 		
-		return true;
+		return DtoUtilMapped.CategoriesToCategoryDTO(categoryService.findAll());
 	}
 	
 	@RequestMapping(value ="/deletecategory/{id}" )

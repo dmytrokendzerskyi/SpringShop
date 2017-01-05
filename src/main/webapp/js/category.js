@@ -5,7 +5,7 @@
 
 
 
-$('#save').click(function() {
+/*$('#save').click(function() {
 	
 	if( document.getElementById('nameCategory').value === ""){
 		 document.getElementById('nameCategory').style.border= '2px solid red';
@@ -31,8 +31,27 @@ $('#save').click(function() {
 	
 	};
 	
-});
+});*/
 
+	var app=angular.module("app", []);
+	app.controller("homeCtrl",['$scope' , '$http', function($scope, $http) {
+		$scope.submit = function() {
+		var category = {
+				name :$scope.text
+		}
+		console.log(category);
+		var response = $http.post('saveCategory?' + $('input[name = csrf_name]').val() + '=' + $('input[name = csrf_value]').val() , JSON.stringify(category));
+		
+	response.then(function(data, status, headers, config) {
+		load();
+		$scope.text = '';
+	}).catch(function(data, status, headers, config) {
+		alert( "Exception details: " + JSON.stringify({data: data}));
+	});
+		};
+	}]);
+	
+	
 function load(){
 	$.ajax({
 		url: 'loadCategory?' + $('input[name =csrf_name]').val() + '=' + $('input[name = csrf_value]').val(),

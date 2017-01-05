@@ -24,7 +24,7 @@
     </div>
     <div ng-app ng-init="checked = false">
 				      <form class="form-signin" action="loginprocesing?${_csrf.parameterName}=${_csrf.token}" method="post" name="form" novalidate>
-				        <label for="name" class="exception">${error} </label>
+				        <label for="name" class="exception" style="color:red;";>${error} </label>
           <label for="username">Email</label>
           <input  class="form-styling" type="email" name="username" id="loginemail" placeholder=""  required/>
            <span ng-show=" frm.loginemail.$error.required" style="color:red; font-size:10px;">Required!!!</span>
