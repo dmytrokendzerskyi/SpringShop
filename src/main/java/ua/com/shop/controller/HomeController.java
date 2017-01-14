@@ -12,8 +12,10 @@ import org.omg.PortableInterceptor.INACTIVE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,10 +49,25 @@ public class HomeController {
 	
 	@RequestMapping(value={"/", "/home"} , method=RequestMethod.GET)
 	public String home(Model model){
-		List<Commodity> commodities = commodityService.findAll();
-		model.addAttribute("users", userService.findAll());
 		model.addAttribute("commodities", DtoUtilMapped.CommoditiesToCommodityDTOs(commodityService.findAll()));
+		
+		Page<Commodity> commodities = commodityService.findAllPage(0, 15);
+		String pages ="";
+		
+		for(int i = 0; i < commodities.getTotalPages(); i++){
+
+            pages+= i+ "-";
+        }
+
+		model.addAttribute("totalPages" , commodities.getTotalPages());
+		
+		model.addAttribute("pages", pages);
+		
+		model.addAttribute("commodities" , commodities );
+		
 		model.addAttribute("user", userService.findUsersWithCommodities());
+		model.addAttribute("users", userService.findAll());
+
 		return "home";
 		
 	}
@@ -74,9 +91,7 @@ public class HomeController {
 	
 		request.getSession(false);
 		response.addCookie(userService.intoBasket(id));
-		
-//		userService.userbuy(principal, id);
-		
+				
 		return "redirect:/";
 	}
 	
@@ -108,10 +123,6 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
-/*	@RequestMapping(value="/home" , method=RequestMethod.POST)
-	public String loginprocesing(){
-		return "redirect:/signIn";
-	}*/
 	
 	@RequestMapping(value ={"/logout" ,"/categoryCommodity/logout"} , method=RequestMethod.POST)
 	public String logount(){
@@ -157,10 +168,6 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
-	
-	
-
-	
 	@RequestMapping("/getOrder/{id}")
 	public String getOrder(Principal principal ,@PathVariable String id , HttpServletRequest request , HttpServletResponse response){
 	String [] cookiesval = new String [request.getCookies().length];
@@ -172,19 +179,6 @@ public class HomeController {
 		response.addCookie(userService.getOrder(Integer.parseInt(principal.getName()),  Integer.parseInt(id), cookiesval , cookiesname));
 		return "redirect:/myProfile";
 	}
-	
-	/*@RequestMapping("/getOrder")
-	public String getOrders(Principal principal , HttpServletRequest request , HttpServletResponse response){
-	String [] cookiesval = new String [request.getCookies().length];
-	String [] cookiesname = new String [request.getCookies().length];
-	for (int i = 0; i < request.getCookies().length; i++) {
-		cookiesval[i] = request.getCookies()[i].getValue();
-		cookiesname[i] = request.getCookies()[i].getName();
-	}
-		response.addCookie(userService.getOrders(Integer.parseInt(principal.getName()), cookiesval , cookiesname));
-		return "redirect:/myProfile";
-	}*/
-	
 	
 	
 	@RequestMapping("/deleteOrder/{id}")
@@ -213,6 +207,32 @@ public class HomeController {
 	public String deleteSubCategory(@PathVariable int id){
 		subCategoryService.delete(id);
 		return "redirect:/subCategory";
+	}
+	
+	@GetMapping("/pageable/{currentPage}/{totalElement}")
+	public String pageable(@PathVariable int currentPage ,@PathVariable int totalElement , Model model){
+		
+		Page<Commodity> commodities = commodityService.findAllPage(currentPage, totalElement);
+		for (int i = 0; i < commodities.getSize(); i++) {
+			System.out.println(commodities.getContent().get(i).getModel());
+		}
+		String pages ="";
+		
+		for(int i = 0; i < commodities.getTotalPages(); i++){
+
+            pages+= i+ "-";
+        }
+
+		model.addAttribute("totalPages" , commodities.getTotalPages());
+		
+		model.addAttribute("pages", pages);
+		
+		model.addAttribute("commodities" , commodities );
+		
+		model.addAttribute("user", userService.findUsersWithCommodities());
+		model.addAttribute("users", userService.findAll());
+		
+		return "home";
 	}
 	
 	

@@ -7,6 +7,9 @@ public class UserDTO {
 	private String surname;
 	private String email;
 
+	public UserDTO() {
+		
+	}
 	
 	public UserDTO(int id, String name, String surname, String email) {
 		super();
@@ -16,23 +19,22 @@ public class UserDTO {
 		this.email = email;
 	}
 
-
 	public int getId() {
 		return id;
 	}
-
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public String getSurname() {
 		return surname;
 	}
@@ -40,22 +42,12 @@ public class UserDTO {
 		this.surname = surname;
 	}
 
-
-	
-	
 	public String getEmail() {
 		return email;
 	}
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public UserDTO() {
-	
-	}
-	
-	
-	
-	
-	
 	
 }

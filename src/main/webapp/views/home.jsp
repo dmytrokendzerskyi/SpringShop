@@ -7,22 +7,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="/SpringShop/css/home.css">
+<link rel="stylesheet" href="/SpringShop/css/bootstrap.css">
  <!-- <link rel="stylesheet" href="sass_compiled/home.css"> -->
- <link rel="stylesheet" src="css/yerslider.css">
- <script type="text/javascript" src="js/demo.yearslider.js"></script>
-<script type="text/javascript" src="js/imagesloaded.js"></script>
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
-<script type="text/javascript" src="js/yerslider.min.js"></script>
-<script type="text/javascript" src="js/yersslider.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <link rel="stylesheet" src="/SpringShop/css/yerslider.css">
+ <script type="text/javascript" src="/SpringShop/js/demo.yearslider.js"></script>
+<script type="text/javascript" src="/SpringShop/js/imagesloaded.js"></script>
+<script type="text/javascript" src="/SpringShop/js/modernizr.js"></script>
+<script type="text/javascript" src="/SpringShop/js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="/SpringShop/js/yerslider.min.js"></script>
+<script type="text/javascript" src="/SpringShop/js/yersslider.js"></script>
+<script type="text/javascript" src="/SpringShop/js/jquery.js"></script>
+<meta http-equiv="Content-Type" content="/SpringShop/text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-
 
 <div class="yerslider yerslider-wrap mysliderclass">
 	<div class="yerslider-viewport">
@@ -31,7 +30,7 @@
 		  <ul class="yerslider-slider">
 			   <a href="categoryCommodity/1"> 
 			  <li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Laptops" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-			  <img alt="" src="images/yerslider/laptop.jpg" class="img_slyder">
+			  <img alt="" src="/SpringShop/images/yerslider/laptop.jpg" class="img_slyder">
 				  <div class="yerslider-slide-inner demo-typo">
   				</div>
            <span class="detach"> </span>
@@ -39,7 +38,7 @@
 			   </a> 
             <a href="categoryCommodity/2"> 
   			<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Smartphones" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-  			<img alt="" src="images/yerslider/smartphone.jpg">
+  			<img alt="" src="/SpringShop/images/yerslider/smartphone.jpg">
 	  			<div class="yerslider-slide-inner demo-typo">
 		  			
 			  	</div>
@@ -48,7 +47,7 @@
         	 </a> 
         	 <a href="categoryCommodity/15"> 
   			<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Tablets" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-  			<img alt="" src="images/yerslider/tablet.png" class="img_slyder">
+  			<img alt="" src="/SpringShop/images/yerslider/tablet.png" class="img_slyder">
   				<div class="yerslider-slide-inner demo-typo">
   				</div>
            <span class="detach">3</span>
@@ -56,7 +55,7 @@
         	</a>
         	<a href="categoryCommodity/3"> 
 	  		<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Flash Memory" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-	  			<img alt="" src="images/yerslider/Flash memory.jpg" class="img_slyder">
+	  			<img alt="" src="/SpringShop/images/yerslider/Flash memory.jpg" class="img_slyder">
 	  			<div class="yerslider-slide-inner demo-typo">
 	  			</div>
            <span class="detach">4</span>
@@ -64,7 +63,7 @@
         	</a>
         	<a href="categoryCommodity/19"> 
 	  		<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Headphones" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-  				<img alt="" src="images/yerslider/headphone.jpg" class="img_slyder">
+  				<img alt="" src="/SpringShop/images/yerslider/headphone.jpg" class="img_slyder">
   				<div class="yerslider-slide-inner demo-typo">
 	  			</div>
            <span class="detach">5</span>
@@ -72,28 +71,28 @@
 	  		</a>
         
 	  		<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Keyboards and Mouses" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-	  			<img alt="" src="images/yerslider/keybord and mouse.jpg" class="img_slyder">
+	  			<img alt="" src="/SpringShop/images/yerslider/keybord and mouse.jpg" class="img_slyder">
 	  			<div class="yerslider-slide-inner demo-typo">
 	  			</div>
            <span class="detach">6</span>
 	  		</li>
         
 	  		<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Cameras" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-	  			<img alt="" src="images/yerslider/camera.png" class="img_slyder">
+	  			<img alt="" src="/SpringShop/images/yerslider/camera.png" class="img_slyder">
 	  			<div class="yerslider-slide-inner demo-typo">
 	  			</div>
            <span class="detach">7</span>
   			</li>
         
 	  		<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Smart Watches" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-	  			<img alt="" src="images/yerslider/smartwatch.jpg" class="img_slyder">
+	  			<img alt="" src="/SpringShop/images/yerslider/smartwatch.jpg" class="img_slyder">
 	  			<div class="yerslider-slide-inner demo-typo">
 	  			</div>
            <span class="detach">8</span>
 	  		</li>
         
 	  		<li class="yerslider-slide" data-thumb-template-key="1" data-thumb-text="Charges" style="box-sizing:content-box; overflow: hidden; height:0px; background-color: white;">
-	  			<img alt="" src="images/yerslider/charge.jpg" class="img_slyder">
+	  			<img alt="" src="/SpringShop/images/yerslider/charge.jpg" class="img_slyder">
 	  			<div class="yerslider-slide-inner demo-typo">
 	  				
 	  			</div>
@@ -110,7 +109,7 @@
 </code>
 
 <div class="container_commodity" style="padding:3%;">
-<c:forEach items="${commodities}" var="commodity">
+<c:forEach items="${commodities.content}" var="commodity">
 <figure class="snip1492" style="float:left; box-sizing: content-box; width:315px; height:500px;">
   <img src="${commodity.pathImage}" alt="sample85" />
   <figcaption>
@@ -126,59 +125,31 @@
 </figure>
 </c:forEach>
 </div>
+<div style="float:left; width:100%; margin-left:200px;margin-top:50px;">
+<c:set var="currentPage" value="${commodities.number}"></c:set>
+<c:set var="totalPage" value="${totalPages -1}"></c:set>
 
+<c:if test="${currentPage != 0}">
+<a href="/SpringShop/pageable/${commodities.number-1}/15">previous</a>
+</c:if>
+
+<c:forTokens var="page" items="${pages }" delims="-">
+<a href="/SpringShop/pageable/${page}/15">${page}</a>
+</c:forTokens>
+
+<c:if test="${currentPage < totalPage}">
+<a href="/SpringShop/pageable/${commodities.number+1}/15">next</a>
+</c:if>
+</div>
 
 	<sec:authorize access="hasAnyRole('ROLE_USER')">
 	 </sec:authorize><br/>
-<%-- <h1>History Shopping</h1>
- <c:forEach items="${user}" var="user">
-	${user.name } ${user.surname } 
-	<a href="deleteuser/${user.id}">delete</a> 
-	<c:forEach items="${user.commodities}" var="commodity">
-	
-	${commodity.name }	${commodity.model}
- 	<a href="deletefromuser/${commodity.id }/${user.id}">delete shopping</a> 
-	</c:forEach>
-	<br>
-</c:forEach> --%>
-<%-- <sec:authorize access="isAuthenticated()">
-<c:forEach items="${historyShoping }" var="commodity">
-${commodity.name } ${commodity.model } ${commodity.price }<br/>
-</c:forEach>
-</sec:authorize> --%>
-
-
-<%-- <table>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>model</th>
-			<th>count</th>
-			<th>maker</th>
-		</tr>
-	
-	</thead>
-	<tbody>
-		<c:forEach items="${commodities}" var="commodity">
-			<td>
-				<tr>${commodity.id}</tr>
-				<tr>${commodity.model}</tr>
-				<tr>${commodity.count}</tr>
-				<tr>${commodity.id}</tr>
-			</td>		
-		
-		</c:forEach>
-	
-	</tbody>
-
-</table> --%>
 
 <div class="div"  style="width:200px;height:200px;"></div>
 
-<!--OAuth 2.  ,  pack4j  -->
-<script type="text/javascript" src="js/yerslider.min.js"></script>
-<script type="text/javascript" src="js/yersslider.js"></script>
-<script type="text/javascript" src="js/demo.yearslider.js"></script>
-<script  src="js/home.js"></script>
+<script type="text/javascript" src="/SpringShop/js/yerslider.min.js"></script>
+<script type="text/javascript" src="/SpringShop/js/yersslider.js"></script>
+<script type="text/javascript" src="/SpringShop/js/demo.yearslider.js"></script>
+<script  src="/SpringShop/js/home.js"></script>
 </body>
 </html>

@@ -4,7 +4,6 @@ import java.util.List;
 
 import ua.com.shop.entity.Maker;
 
-
 public interface MakerService  {
 
 	void save(Maker maker);
@@ -15,6 +14,5 @@ public interface MakerService  {
 	Maker findByName(String name);
 	
 	void deleteMakerWithCommodity(String id);
-	
 	
 }

@@ -40,10 +40,6 @@ public class SubCategoryController {
 		return DtoUtilMapped.SubCategorytoSubCategoryDTO(subCategoryService.findAll());
 	}
  	
-	/*@RequestMapping(value ="/deleteSubCategory/{id}" , method=RequestMethod.DELETE)
-	public void deleteSubCategory(@RequestBody int id){
-		subCategoryService.delete(id);
-	}*/
 	
 	@RequestMapping(value="search" , method=RequestMethod.POST)
 	public List<CommodityDTO> search(@RequestBody String search){

@@ -32,6 +32,11 @@
  		});
  		};
 	});
+ 	document.getElementById('subCategoryName').oninput =(function(){
+ 		if(document.getElementById("subCategoryName").value != ""){
+ 			document.getElementById("subCategoryName").style.border = '2px solid black';
+ 		}
+ 		});
  		
  		function load() {
  			$.ajax({
@@ -75,7 +80,6 @@
 		        }
 		    })
 
-
-		}
+}
 
  		

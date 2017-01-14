@@ -38,7 +38,6 @@ public class User implements UserDetails{
 	
 	private String pathImage;
 	
-	
 	@ManyToMany
 	@JoinTable(name ="user_commodity" , joinColumns = @JoinColumn(name ="id_user") ,
 	inverseJoinColumns =@JoinColumn(name ="id_commodity"))
@@ -46,7 +45,6 @@ public class User implements UserDetails{
 	
 	@Enumerated
 	private Role role;
-	
 	
 	public User(String name, String surname, String password, String email, String phoneNumber,
 			List<Commodity> commodities) {
@@ -59,9 +57,6 @@ public class User implements UserDetails{
 		this.commodities = commodities;
 	}
 
-	
-
-
 	public User(String name, String surname, String password, String email) {
 		super();
 		this.name = name;
@@ -70,35 +65,21 @@ public class User implements UserDetails{
 		this.email = email;
 	}
 
-
-
-
 	public String getPassword() {
 		return password;
 	}
-
-
-
 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-
-
-
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
 
-
-
 	public List<Commodity> getCommodities() {
 		return commodities;
 	}
-
-
-
 
 	public void setCommodities(List<Commodity> commodities) {
 		this.commodities = commodities;
@@ -108,14 +89,9 @@ public class User implements UserDetails{
 		return id;
 	}
 
-
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
 
 	public String getName() {
 		return name;
@@ -141,34 +117,21 @@ public class User implements UserDetails{
 		this.email = email;
 	}
 
-
-
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
-
-
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-
-
-
 	public Role getRole() {
 		return role;
 	}
 
-
-
-
 	public void setRole(Role role) {
 		this.role = role;
 	}
-
 
 // for security
 
@@ -178,86 +141,48 @@ public class User implements UserDetails{
 		return authorities;
 	}
 
-
-
-
 	public String getUsername() {
 		return String.valueOf(id);
 	}
-
-
-
 
 	public boolean isAccountNonExpired() {
 		return true;
 	}
 
-
-
-
 	public boolean isAccountNonLocked() {
 		return true;
 	}
-
-
 
 	public boolean isCredentialsNonExpired() {
 		return true;
 	}
 
-
-
 	public boolean isEnabled() {
 		return enabeled;
 	}
-
-
-
 
 	public String getPathImage() {
 		return pathImage;
 	}
 
-
-
-
 	public void setPathImage(String pathImage) {
 		this.pathImage = pathImage;
 	}
-
-
-
 
 	public String getUUID() {
 		return UUID;
 	}
 
-
-
-
 	public void setUUID(String uUID) {
 		UUID = uUID;
 	}
-
-
-
 
 	public boolean isEnabeled() {
 		return enabeled;
 	}
 
-
-
-
 	public void setEnabeled(boolean enabeled) {
 		this.enabeled = enabeled;
 	}
-
-	
-
-
-	
-
-
 	
 }

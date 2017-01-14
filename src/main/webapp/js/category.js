@@ -2,9 +2,6 @@
 	 load();
 	};
 	
-
-
-
 /*$('#save').click(function() {
 	
 	if( document.getElementById('nameCategory').value === ""){
@@ -35,10 +32,16 @@
 
 	var app=angular.module("app", []);
 	app.controller("homeCtrl",['$scope' , '$http', function($scope, $http) {
+		
 		$scope.submit = function() {
-		var category = {
-				name :$scope.text
-		}
+		if( $scope.text == null || $scope.text == ""){
+			 document.getElementById('nameCategory').style.border= '2px solid red';
+		}else{
+			var category = {
+					name :$scope.text
+			}
+			
+			document.getElementById('nameCategory').style.border= '2px solid black';
 		console.log(category);
 		var response = $http.post('saveCategory?' + $('input[name = csrf_name]').val() + '=' + $('input[name = csrf_value]').val() , JSON.stringify(category));
 		
@@ -49,8 +52,15 @@
 		alert( "Exception details: " + JSON.stringify({data: data}));
 	});
 		};
+		};
 	}]);
-	
+	document.getElementById('nameCategory').oninput =(function(){
+		if(document.getElementById("nameCategory").value != ""){
+			document.getElementById("nameCategory").style.border = '2px solid black';
+		}
+		
+		
+	});
 	
 function load(){
 	$.ajax({
@@ -72,6 +82,5 @@ function load(){
 			
 		}
 	});
-	
 	
 }

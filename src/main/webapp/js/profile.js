@@ -209,8 +209,3 @@ app.directive('jsonEdit', function() {
     }
   };
 });
-
-// $.getJSON('//gd.geobytes.com/GetCityDetails?callback=?', function(data) {
-//   //console.log(JSON.stringify(data, null, 2));
-//   document.getElementById("IpAddress").value = data.geobytesremoteip;
-// });

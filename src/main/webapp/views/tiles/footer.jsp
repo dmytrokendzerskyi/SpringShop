@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="css/tiles/footer.css">
+<link href="/SpringShop/css/tiles/footer.css">
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Footer</h1>
  <section class="full-width white-bg footer__links" style="padding-left:23%; padding-right: 20%">
       <div class="row footer__links--social">
         <div class="small-12 small-centered columns text-center">
@@ -345,7 +344,6 @@
     </div>
   </div>
 </div>
-
 
 <span data-selector="tooltip-iafk1mfv0" id="tooltip-iafk1mfv0" class="tooltip tip-top" role="tooltip">Cleaned / Raw Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.<span class="nub"></span></span>
 <span

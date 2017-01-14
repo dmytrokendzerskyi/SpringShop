@@ -13,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import ua.com.shop.entity.Commodity;
 import ua.com.shop.entity.User;
 
-
 public interface UserService {
 
 	void save(User user) throws Exception;
@@ -31,13 +30,11 @@ public interface UserService {
 	
 	void saveImage(int idprincipal, MultipartFile multipartFile);
 	
-	
 	User findByUUID(String uuid);
 	
 	void update(User user);
 	
 	User findByName(String email);
-	
 	
 	// for cookie
 	
@@ -50,8 +47,5 @@ public interface UserService {
 	/*Cookie []  getOrders(int idprincipal, String [] cookiesval, String [] cookiesname);*/
 	
 	Cookie deleteOrder(int id, String [] cookiesval, String [] cookiesname);
-	
-	
-	
 	
 }

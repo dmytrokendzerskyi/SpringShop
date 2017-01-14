@@ -63,69 +63,18 @@
     <%-- <p>${commodity.pathImage }</p> --%>
     <div class="price">
       $ ${commodity.price} 
-        <sec:authorize access="hasRole('ROLE_USER')" > 
 <a href="buyCommodity/${commodity.id}" style="color:black;">Buy</a>
-  </sec:authorize>
     </div>
   </figcaption>
-  <sec:authorize access="hasRole('ROLE_USER')" > 
   <a href="buyCommodity/${commodity.id}" style="color:black;"></a>
-  </sec:authorize>
 </figure>
   </li>
 </c:forEach>
   <span class="empty-item">no results</span>
 </ul>
    </section>
-   
-<!-- <div class="wrap" style="height:200px;">
-<div style="float:right;">
-<sec:authorize access="isAuthenticated()">
-<form:form action="logout" method="post" style="float:right; margin-left:15px; margin-right:10px; margin-top:5px;">
-<button>logout</button>
-</form:form>
-</sec:authorize>
-<sec:authorize access="hasRole('ROLE_ADMIN')" >
-<a href="new">admin page</a>
-</sec:authorize>
-</div>
-<div class="logotipe" style="margin:0px;"><span>TechnoMan</span></div>
-<div id='menu-nav'>
-  <div id='navigation-bar'>
-    <ul>
-      <li class='menu-sub-nav current-item'><a href='home'><i class='fa fa-home'></i><span>Home</span></a></li>
-      <li class='menu-sub-nav'><a href='#'><i class='fa fa-cogs'></i><span>About</span></a></li>
-      <sec:authorize access="hasRole('ROLE_USER')"><li class='menu-sub-nav'><a href='myProfile'><i class='fa fa-user'></i><span>Profile</span></a></li></sec:authorize>
-      <li class='menu-sub-nav'><a href='userSign'><i class='fa fa-book'></i><span>Contact</span></a></li>
-      <li class='menu-sub-nav' id='searchbox'><a href='#'><i class='fa fa-search'></i><span>Search</span></a></li>
-    </ul>
-  </div>
-  <div id='search-bar'>
-    <form action='nothing'>
-      <input type='text' name='search' id='searchfld' placeholder='Enter your query and hit enter'/>
-    </form>
-  </div>
-</div>
-</div> -->
+ 
 <div class="all"></div>
-
-<%-- <div class="container_commodity" style="padding:3%;">
-<c:forEach items="${category}" var="commodity">
-<figure class="snip1492" style="float:left; box-sizing: content-box; width:315px; height:520px;">
-  <img src="${commodity.pathImage}" alt="sample85" />
-  <figcaption>
-    <h3>${commodity.name}</h3>
-    <p>${commodity.model }</p>
-    <p>${commodity.pathImage }</p>
-    <div class="price">
-      $ ${commodity.price} 
-<a href="buyCommodity/${commodity.id}" style="color:black;">Buy</a>
-    </div>
-  </figcaption>
-  <a href="buyCommodity/${commodity.id}" style="color:black;"></a>
-</figure>
-</c:forEach>
-</div> --%>
 
 <script>
 /* Demo purposes only */
@@ -133,38 +82,6 @@ $(".hover").mouseleave(
   function() {
     $(this).removeClass("hover");
   }
-);
-
-     
-/* document.getElementById('searchfld').oninput =(function(){
-	 var search  =  $('searchfld').val();
-		$.ajax({
-			url: 'search?' + $('input[name = csrf_name]').val() + '=' + $('input[name = csrf_value]').val(),
-				contentType :'application/json ; charSet=UTF-8',
-				method : 'POST',
-				dataType : 'json',
-				data: search ,
-				 success : function(res) {
-
- 					 var allsearch = document.createElement('div');
- 					 allsearch.id = 'all';
- 					var all = '';
- 						
- 					for (var i = 0; i < res.length; i++) {
-						all+='<figure class="snip1492">'+
-						  +'<img src="'+res[i].pathImage+'" alt="sample85" />'+
-							  '<figcaption><h3>'+res[i].name+'</h3><p>'+res[i].model+'</p><div class="price">'+
-							      '$'+ res[i]commodity.price} +
-							'<a href="buyCommodity/${commodity.id}" style="color:black;">Buy</a></div></figcaption><a href="buyCommodity/${commodity.id}" style="color:black;"></a></figure>'
-					}
- 					
- 					document.getElementById('all').innerHTML = all;
-				 }
-	
-	
-	
-});
-}); */
 
 $(document).ready(function() {
 
@@ -190,7 +107,6 @@ $(document).ready(function() {
 	  }
 	});
 	    
-	    
 	    $("#list li").not(":containsi('" + searchSplit + "')").each(function(e)   {
 	      $(this).addClass('hiding out').removeClass('in');
 	      setTimeout(function() {
@@ -208,8 +124,7 @@ $(document).ready(function() {
 	  
 	      var jobCount = $('#list .in').length;
 	    $('.list-count').text(jobCount + ' items');
-	    
-	    //shows empty state text when no jobs found
+
 	    if(jobCount == '0') {
 	      $('#list').addClass('empty');
 	    }
@@ -219,34 +134,6 @@ $(document).ready(function() {
 	    
 	  });
 
-	  
-	                  
-	     /*  
-	     An extra! This function implements
-	     jQuery autocomplete in the searchbox.
-	     Uncomment to use :)
-	     
-	     
-	 function searchList() {                
-	    //array of list items
-	    var listArray = [];
-	  
-	     $("#list li").each(function() {
-	    var listText = $(this).text().trim();
-	      listArray.push(listText);
-	    });
-	    
-	    $('#search-text').autocomplete({
-	        source: listArray
-	    });
-	    
-	    
-	  }
-	                                   
-	  searchList();
-	*/
-	  
-	                    
 	});
 	
 	$(function() {
@@ -262,7 +149,6 @@ $(document).ready(function() {
 		  })
 		}
 </script>
-
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script  src="/js/categorycommodity.js"></script>

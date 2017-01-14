@@ -3,8 +3,10 @@ package ua.com.shop.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import ua.com.shop.dto.CategoryDTO;
 import ua.com.shop.dto.DtoUtilMapped;
 import ua.com.shop.entity.Category;
+import ua.com.shop.entity.Commodity;
 import ua.com.shop.service.CategoryService;
 import ua.com.shop.service.CommodityService;
 
@@ -24,6 +27,8 @@ public class CategoryController {
 	
 	@Autowired
 	private CategoryService categoryService;
+	@Autowired
+	private CommodityService commodityService;
 	
 	
 	@RequestMapping(value ="/newCategory")
@@ -58,6 +63,8 @@ public class CategoryController {
 	
 	@RequestMapping(value = "/categoryCommodity/{id}")
 	public String categoryCommodity(@PathVariable int id , Model model){
+		
+		
 		model.addAttribute("category", (categoryService.findCommodityByCategory(id)));
 		return "categoryCommodity";
 	}
@@ -67,7 +74,6 @@ public class CategoryController {
 		categoryService.delete(id);
 		return "redirect:/newCategory";
 	}
-	
 	
 	
 }

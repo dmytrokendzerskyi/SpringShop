@@ -19,7 +19,6 @@ public class SubCategory {
 	
 	private String name;
 
-	
 	@ManyToMany
 	@JoinTable(name = "subcategory_commodity" , joinColumns = @JoinColumn(name = "id_subcategory") ,
 	inverseJoinColumns = @JoinColumn(name = "id_commodity"))
@@ -29,14 +28,10 @@ public class SubCategory {
 		
 	}
 
-	
-
 	public SubCategory(String name) {
 		super();
 		this.name = name;
 	}
-
-
 
 	public int getId() {
 		return id;
@@ -54,23 +49,12 @@ public class SubCategory {
 		this.commodities = commodities;
 	}
 
-
-
 	public String getName() {
 		return name;
 	}
-
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	
-	
-	
-	
-	
-	
-
 }

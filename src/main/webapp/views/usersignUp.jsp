@@ -48,23 +48,5 @@
 
 </sf:form> 
 
-<script>
-
-
-</script>
-
-<!-- <form action="click" method="post">
-	<input name ="username" placeholder ="username" onclick="enter">
-	<input name ="surname" placeholder ="username"><br>
-	<input name="login" placeholder="login">
-	<br>
-	<input name ="phoneNumber" placeholder ="phoneNumber">
-	<br>
-	<input name ="email" placeholder ="email" type="email">
-	<input name ="password" placeholder ="password" type="password">
-	<br>
-	<button>sign up</button>
-</form> -->
-
 </body>
 </html>

@@ -18,7 +18,7 @@
         <security:intercept-url pattern="/newMaker" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/newSubCategory" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/usersignUp" access="hasRole('ROLE_ADMIN')"/>
-        <security:intercept-url  pattern="/buyCommodity/*" access="hasRole('ROLE_USER')"/>
+        <security:intercept-url  pattern="/buyCommodity/*" access="hasRole('ROLE_USER')" />
         <security:intercept-url  pattern="/categoryCommodity/buyCommodity/*" access="hasRole('ROLE_USER')"/>
     </security:http>
 

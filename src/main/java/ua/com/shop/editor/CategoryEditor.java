@@ -17,10 +17,4 @@ public class CategoryEditor extends PropertyEditorSupport {
 		setValue(categoryService.findOne(Integer.parseInt(text)));
 	}
 
-	
-	
-	
-	
-	
-	
 }

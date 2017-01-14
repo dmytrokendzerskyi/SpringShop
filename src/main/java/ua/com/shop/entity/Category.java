@@ -23,7 +23,6 @@ public class Category  {
 	inverseJoinColumns = @JoinColumn(name ="id_commodity"))
 	private List<Commodity> commodities;
 
-	
 	public Category(){
 		
 	}
@@ -44,9 +43,11 @@ public class Category  {
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public List<Commodity> getCommodities() {
 		return commodities;
 	}
@@ -59,9 +60,5 @@ public class Category  {
 	public String toString() {
 		return "Category [id=" + id + ", name=" + name + ", commodities=" + commodities + "]";
 	}
-	
-	
-	
-	
-	
+
 }

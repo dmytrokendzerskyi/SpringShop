@@ -11,27 +11,14 @@ public class MakersEditor extends PropertyEditorSupport {
 	@Autowired
 	private MakerService makerService;
 	
-	
-	
-public MakersEditor(MakerService makerService) {
+	public MakersEditor(MakerService makerService) {
 		super();
 		this.makerService = makerService;
 	}
-
-
-
-//	private final MakerService makerService;
-
-//	public MakersEditor(MakerService makerService) {
-//		super();
-//		this.makerService = makerService;
-//	}
 
 	@Override
 	public void setAsText(String text) throws IllegalArgumentException {
 		setValue(makerService.findOne(Integer.parseInt(text)));
 	}
-	
-	
 	
 }

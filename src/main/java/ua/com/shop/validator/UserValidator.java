@@ -9,10 +9,8 @@ import ua.com.shop.entity.User;
 @Component("userValidator")
 public class UserValidator  implements Validator{
 
-	
 	@Autowired
 	private UserDao userDao;
-	
 	
 	public void validate(Object object) throws Exception{
 		User user =  (User)object ;

@@ -63,8 +63,6 @@
       
       		<script>
       		
-      		
-      		
       		document.getElementById('useremail').oninput =(function(){
       			
       		var email = $('#useremail').val()
@@ -88,7 +86,6 @@
       			});
       		});
       		
-      		
       		document.getElementById('loginemail').oninput =(function(){
       			
           		var email = $('#loginemail').val()
@@ -111,38 +108,7 @@
     				 }
           			});
           		});
-      		
-      		/* 
-      		(function(){
-      			var app = angular.module('myapp', ['ngRoute']);
-      			var controller = angular.controller('controllervalidator');
-      		app.controller('controller' , function validation($http) {
-      		var user = {
-      				name : $scope.name,
-      				surname : $scope.surname,
-      				email : $scope.email,
-      				password : $scope.password
-      		}
-      		console.log(user);
-			$scope.load = function () {
-				$http({
-					url: 'http://localhost:8080/SpringShop/userSign/validatoremail',
-					method:'POST',
-					headers: {'Content-Type': 'application/json'},
-					data:JSON.stringify(user),
-				}).then(function successCallback(response) {
-                    console.log(response.data);
-                }, function errorCallback() {
-                    alert("Ошибка");
-                });
-			}	
-      			
-      			
-      			
-			});
-      		}); */
-   	
-      		
+      	
       		</script>
       
             <div  class="success">

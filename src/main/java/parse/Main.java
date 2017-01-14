@@ -25,24 +25,11 @@ import ua.com.shop.service.MakerService;
 
 public class Main {
 	
-	/*@Autowired
-	private static CommodityService commodityService;
-	
-	@Autowired
-	private static CategoryService categoryService;
-	
-	@Autowired
-	private static MakerService makerService;*/
-	
-	
-	
-	
 	public static void main(String[] args) throws IOException {
 		
 		parse();
 		
 	}
-
 
 	public static void parse() throws IOException{
 		
@@ -97,23 +84,7 @@ public class Main {
 			entityManager.persist(commodity);
 			entityManager.getTransaction().commit();
 			
-			
-			
-			
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		//		Document documen = Jsoup.connect("http://rozetka.com.ua/notebooks/asus/c80004/v004/").get();
 		

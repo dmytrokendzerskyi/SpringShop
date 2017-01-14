@@ -62,26 +62,7 @@ $(function() {
   $(".profile-photo").toggleClass("profile-photo-down");
   $(".btn-goback").toggleClass("btn-goback-up");
   $(".forgot").toggleClass("forgot-fade");
-/*				}
-	});*/
+
 });
 });
 
-/*$(function validatorEmail(email){
-	console.log(email);
-	$.ajax({
-		url: 'validatoremail?' + $('input[name = csrf_name]').val() + '=' + $('input[name = csrf_value]').val(),
-		contentType :'application/json ; charset=UTF-8',
-		dataType : 'json',
-		method : 'POST',
-		data:JSON.stringify(email),
-		success: function(bool) {
-			if(bool=== true){
-				return true;
-			}
-		}
-		
-		
-	});
-});
-*/

@@ -18,23 +18,17 @@ public class Maker {
 	private String name;
 	private String adress;
 
-	
 	@OneToMany(fetch = FetchType.LAZY , mappedBy ="maker")
 	private List<Commodity> commodities;
 	
 	public Maker() {
-		// TODO Auto-generated constructor stub
 	}
-
-
 
 	public Maker(String name, String adress) {
 		super();
 		this.name = name;
 		this.adress = adress;
 	}
-
-
 
 	public int getId() {
 		return id;
@@ -68,16 +62,9 @@ public class Maker {
 		this.commodities = commodities;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Maker [id=" + id + ", name=" + name + ", adress=" + adress + ", commodities=" + commodities + "]";
 	}
 
-	
-	
-	
-	
-	
 }

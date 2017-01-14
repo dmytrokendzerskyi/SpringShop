@@ -14,7 +14,6 @@
 <a href="backhome">home page</a>
 <h1>NEW COMMODITY</h1>
 
-
 <input name ="name" type="text" id="idName">
 <input name = "model" type="text" id ="idModel">
 <input name = "price" type="number"  step="0.01" id ="idPrice">
@@ -30,7 +29,6 @@
 </select>  
 
 <button   id="save"> Save </button>
-
 
 <input type="hidden" name="csrf_name" value="${_csrf.parameterName}">
 <input type="hidden" name="csrf_value" value="${_csrf.token}">				
@@ -57,9 +55,7 @@
 		</tbody>
 	</table>
 
-
 <script src="js/commodity.js"></script>
-
 
 </body>
 </html>

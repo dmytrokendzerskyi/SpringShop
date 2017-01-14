@@ -42,10 +42,7 @@ public class UserController {
 	
 	
 	@RequestMapping(value ="/saveUser" , method=RequestMethod.POST)
-	public String click(/*@RequestParam String username, @RequestParam String surname ,@RequestParam String login , @RequestParam String password , @RequestParam String phoneNumber ,@RequestParam String email*/ 
-			@ModelAttribute User user , Model model){
-
-//		User user = new User(username, surname, login ,password, email, phoneNumber);
+	public String click(@ModelAttribute User user , Model model){
 		try{
 		userService.save(user);
 	} catch (Exception e) {

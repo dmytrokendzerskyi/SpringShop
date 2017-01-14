@@ -51,7 +51,4 @@ public class MakerServiceImpl implements MakerService{
 		makerDao.delete(idmaker);
 	}
 
-	
-	
-	
 }

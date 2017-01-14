@@ -13,4 +13,5 @@ public interface SubCategoryService {
 	List<SubCategory> findAll();
 	
 	void delete(int id);
+
 }

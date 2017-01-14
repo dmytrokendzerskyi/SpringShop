@@ -62,22 +62,9 @@ public class CommodityController {
 	public void newCommodity(@RequestBody CommodityDTO commodityDTO){
 	System.out.println(commodityDTO);
 		commodityService.savecategoryCommodity(commodityDTO.getName(), commodityDTO.getModel(), commodityDTO.getPrice(),
-				Integer.parseInt(commodityDTO.getMaker()),commodityDTO.getCategories());
-//		
+				Integer.parseInt(commodityDTO.getMaker()),commodityDTO.getCategories());		
 	}
 	
-//	@RequestMapping(value ="/clickCommodity" , method =RequestMethod.POST)
-//	public String saveCommodity(@RequestParam String name , @RequestParam String model , @RequestParam int price,
-//			@RequestParam String [] idCategory, @RequestParam String idMaker) {
-//		
-//		Commodity commodity =new Commodity(name, model,price) ;
-//		
-//		commodityService.savecategoryCommodity(commodity, idCategory , Integer.parseInt(idMaker));
-//		
-//		return "redirect:/commoditysignUp";
-//		
-//		
-//	}
 	
 	@RequestMapping(value="/deletecommodity/{id}" , method=RequestMethod.GET)
 	public String delete(@PathVariable int id){
@@ -85,7 +72,6 @@ public class CommodityController {
 		commodityService.delete(id);
 		
 		return "redirect:/commoditysignUp";
-		
 		
 	}
 	

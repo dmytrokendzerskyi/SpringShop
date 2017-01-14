@@ -17,7 +17,6 @@
 	${maker.name} ${maker.adress } 
 	<a href="deletemaker/${maker.id}">delete</a><br>
 	
-
 </c:forEach>
 <h1>NEW MAKER</h1>
 <form:form modelAttribute="maker" action="savenewMaker" method="post">
@@ -25,15 +24,6 @@
 <form:input path="adress" type="text" placeholder="adress"/>
 <form:button>save</form:button>
 </form:form>
-
-<%-- 
-<form action="clickMaker" method="post">
-<input name="name" placeholder="name"><br>
-<input name="phoneNumber" placeholder="phoneNumber"><br>
-<input name ="adress" placeholder="adress"><br>
-<input name="count" placeholder="count" type="number"><br>
-<button>save</button> --%>
-
 
 </form>
 

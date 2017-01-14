@@ -11,9 +11,6 @@ import ua.com.shop.entity.Maker;
 
 public interface MakerDao extends JpaRepository<Maker, Integer> {
 
-	
-/*	@Query("select m from maker m where m.name =:name")
-	Maker findByName(@Param("name") String name);*/
 
 	Maker findByName(String name);
 	

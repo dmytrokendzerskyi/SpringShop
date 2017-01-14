@@ -26,9 +26,6 @@ font-family:Palatino Linotype;
 
 <img src="${use.pathImage }"  alt="add image" height="300px" width="300px">
 
-
-
-
 <br/>
 
 <form:form action="./saveImage?${_csrf.parameterName}=${_csrf.token}"

@@ -18,7 +18,10 @@
         <put-attribute name="title" value="Home Page" />  
         <put-attribute name="body" value="/views/home.jsp" />  
     </definition>  
-    
+        <definition name="page" extends="base.definition">  
+        <put-attribute name="title" value="Pages" />  
+        <put-attribute name="body" value="/views/page.jsp" />  
+    </definition>  
   <!--      <definition name="categoryCommodity" extends="base.definition">  
         <put-attribute name="title" value="Category" />  
         <put-attribute name="body" value="/views/categoryCommodity.jsp" />  

@@ -68,9 +68,6 @@ public class UserServiceImpl implements UserService,UserDetailsService{
 		userDao.delete(id);
 	}
 	
-	
-	
-
 	@Transactional
 	public void userbuy(int idprincipal ,int id) {
 		
@@ -91,20 +88,8 @@ public class UserServiceImpl implements UserService,UserDetailsService{
 	Commodity commodity = commodityDao.findOne(cid);
 		User user = userDao.findUserwithCommodity(uid);
 		user.getCommodities().remove(commodity);
-		/*List<Commodity> list = user.getCommodities();
-		
-		
-		for (Iterator iterator = list.iterator(); iterator.hasNext();) {
-			Commodity commod = (Commodity) iterator.next();
-			if(commod.getId() == cid){
-				iterator.remove();
-			}
-			
-		}
-		user.setCommodities(list);*/
+
 		userDao.save(user);
-		
-		
 		
 	}
 
@@ -174,7 +159,6 @@ public class UserServiceImpl implements UserService,UserDetailsService{
 
 	public List<Commodity> userCommodityCookie(Cookie [] cookies) {
 
-		
 		List<Commodity> commodities = new ArrayList<Commodity>();
 		
 		for (Cookie cookie : cookies) {
@@ -201,18 +185,6 @@ public class UserServiceImpl implements UserService,UserDetailsService{
 		return sortCookies(cookiesval , cookiesname , id );
 		
 	}
-
-/*	@Transactional
-	public Cookie [] getOrders(int idprincipal, String [] cookiesval, String [] cookiesname) {
-		
-		User user = userDao.findUserwithCommodity(idprincipal);
-		
-		
-		user.getCommodities().add(commodity);
-		
-		return sortCookies(cookiesval , cookiesname , id );
-		
-	}*/
 	
 	public Cookie deleteOrder(int id, String [] cookiesval, String [] cookiesname) {
 		return sortCookies(cookiesval , cookiesname, id);
@@ -233,5 +205,4 @@ public class UserServiceImpl implements UserService,UserDetailsService{
 		return null;
 	}
 
-	
 }

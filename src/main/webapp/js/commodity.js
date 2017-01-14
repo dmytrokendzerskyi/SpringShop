@@ -43,3 +43,18 @@ $('#save').click(function() {
 	});
 	};
 });
+document.getElementById('idName').oninput =(function(){
+	if(document.getElementById("idName").value != ""){
+		document.getElementById("idName").style.border = '2px solid black';
+	}
+	});
+document.getElementById('idModel').oninput =(function(){
+	if(document.getElementById("idModel").value != ""){
+		document.getElementById("idModel").style.border = '2px solid black';
+	}
+	});
+document.getElementById('idPrice').oninput =(function(){
+	if(document.getElementById("idPrice").value != ""){
+		document.getElementById("idPrice").style.border = '2px solid black';
+	}
+	});

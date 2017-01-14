@@ -2,9 +2,10 @@ package ua.com.shop.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import ua.com.shop.dto.CommodityDTO;
 import ua.com.shop.entity.Commodity;
-
 
 public interface CommodityService {
 
@@ -17,4 +18,7 @@ public interface CommodityService {
 	
 	List<Commodity> search(String search);
 	
+	Page<Commodity> findAllPage(int currentPage , int numberOfItem);
+	
+/*	Page<Commodity>  findPageCommodityByCategory(int id , int currentPage , int totalPage);*/
 }

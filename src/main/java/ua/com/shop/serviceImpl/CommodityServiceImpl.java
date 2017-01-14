@@ -5,6 +5,9 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import ua.com.shop.dao.CategoryDao;
@@ -66,4 +69,14 @@ public class CommodityServiceImpl implements CommodityService{
 	public List<Commodity> search(String search) {
 		return commodityDao.liveSearch(search);
 	}
+
+	public Page<Commodity> findAllPage(int currentPage, int numberOfItem) {
+		Pageable pageable = new PageRequest(currentPage, numberOfItem);
+		return commodityDao.findAll(pageable);
+	}
+
+/*	public Page<Commodity> findPageCommodityByCategory(int id, int currentPage, int totalElement) {
+		Pageable pageable = new PageRequest(currentPage, totalElement);
+		return (Page<Commodity>) commodityDao.findPageCommodityByCategory(id, pageable);
+	}*/
 }

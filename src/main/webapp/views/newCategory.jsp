@@ -7,7 +7,7 @@
 <html data-ng-app="app">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="css/categoryCommodity.css">
+<link rel="stylesheet" href="css/newCategory.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <title>Insert title here</title>
@@ -24,14 +24,14 @@
 	<form:input path="name"  placeholder="name"/>
 	<form:button>save</form:button>
 </form:form> --%>
+
 <form data-ng-submit="submit()">
 <input id="nameCategory" placeholder="name" data-ng-model="text" >
-<input id="submit" type="submit" value="Submit"> 
+<button id="submit" type="submit" value="Submit"> Save</button>
 	<input type="hidden" name ="csrf_name" value="${_csrf.parameterName}">
 	<input type="hidden" name ="csrf_value" value="${_csrf.token}">
-<%-- <input type="hidden" name="csrf_name"  value="${_csrf.parameterName}">
-<input  type="hidden" name="csrf_value" value="${_csrf.token}"> --%>
 </form>
+
 <script type="text/javascript" src="js/category.js"></script>
 </body>
 </html>

@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/tiles/header.css">
-<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="/SpringShop/css/tiles/header.css">
+<script type="text/javascript" src="/SpringShop/js/jquery-3.1.1.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -30,16 +30,11 @@
       <li class='menu-sub-nav'><a href='#'><i class='fa fa-cogs'></i><span>About</span></a></li>
       <sec:authorize access="hasRole('ROLE_USER')"><li class='menu-sub-nav'><a href='myProfile'><i class='fa fa-user'></i><span>Profile</span></a></li></sec:authorize>
       <li class='menu-sub-nav'><a href='userSign'><i class='fa fa-book'></i><span>Sign In | Sign Up</span></a></li>
-      <li class='menu-sub-nav' id='searchbox'><a href='#'><i class='fa fa-search'></i><span>Search</span></a></li>
     </ul>
   </div>
-  <div id='search-bar'>
-    <form action='nothing'>
-      <input type='text' name='search' id='searchfld' placeholder='Enter your query and hit enter'/>
-    </form>
-  </div>
+  
 </div>
 </div>
-<script type="text/javascript" src="js/tiles/header.js"></script>
+<script type="text/javascript" src="/SpringShop/js/tiles/header.js"></script>
 </body>
 </html>
